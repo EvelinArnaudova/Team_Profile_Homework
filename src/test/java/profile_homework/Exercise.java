@@ -144,6 +144,24 @@ public class Exercise {
         Boolean isTextDisplayed = wait.until(ExpectedConditions.textToBe(By.tagName("h2"), name));
         Assert.assertTrue(isTextDisplayed);
 
+        WebElement modifyProfile = driver.findElement(By.xpath("//i[@class=\"fas fa-user-edit\"]"));
+        wait.until(ExpectedConditions.elementToBeClickable(modifyProfile));
+        modifyProfile.click();
+
+        WebElement modifyTitleText = driver.findElement(By.tagName("h4"));
+        wait.until(ExpectedConditions.visibilityOf(modifyTitleText));
+
+        WebElement publicInfoField = driver.findElement(By.xpath("//textarea[@formcontrolname=\"publicInfo\"]"));
+        wait.until(ExpectedConditions.elementToBeClickable(publicInfoField));
+        publicInfoField.sendKeys("My info");
+
+        WebElement saveButton = driver.findElement(By.xpath("//button[@type=\"submit\"]"));
+        wait.until(ExpectedConditions.elementToBeClickable(saveButton));
+        saveButton.click();
+
+
     }
+
+
 
 }
