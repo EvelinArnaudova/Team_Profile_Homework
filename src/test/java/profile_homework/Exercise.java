@@ -32,12 +32,12 @@ public class Exercise {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
-    /*@AfterMethod
+    @AfterMethod
     protected final void tearDownTest() {
         if (this.driver != null) {
             this.driver.close();
         }
-    }*/
+    }
 
    /* @Test(priority = 0)
     public void testRegistration() {
