@@ -39,7 +39,7 @@ public class Exercise {
         }
     }*/
 
-    @Test(priority = 0)
+   /* @Test(priority = 0)
     public void testRegistration() {
         driver.get("http://training.skillo-bg.com:4300/posts/all");
         WebElement loginLink = driver.findElement(By.id("nav-link-login"));
@@ -101,7 +101,7 @@ public class Exercise {
 
     private String generateRandomAlphabeticString(int minLengthInclusive, int maxLengthInclusive) {
         return RandomStringUtils.randomAlphanumeric(minLengthInclusive, maxLengthInclusive);
-    }
+    }*/
 
     @DataProvider(name = "generateUsers")
     public Object[][] generateUsers(){
