@@ -151,6 +151,14 @@ public class Exercise {
         WebElement modifyTitleText = driver.findElement(By.tagName("h4"));
         wait.until(ExpectedConditions.visibilityOf(modifyTitleText));
 
+        WebElement publicInfoClear = driver.findElement(By.xpath("//textarea[@formcontrolname=\"publicInfo\"]"));
+        wait.until(ExpectedConditions.elementToBeClickable(publicInfoClear));
+        publicInfoClear.clear();
+
+        WebElement clearSave = driver.findElement(By.xpath("//button[@type=\"submit\"]"));
+        wait.until(ExpectedConditions.elementToBeClickable(clearSave));
+        clearSave.click();
+
         WebElement publicInfoField = driver.findElement(By.xpath("//textarea[@formcontrolname=\"publicInfo\"]"));
         wait.until(ExpectedConditions.elementToBeClickable(publicInfoField));
         publicInfoField.sendKeys("My info");
