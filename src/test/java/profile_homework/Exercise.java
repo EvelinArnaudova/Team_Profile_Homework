@@ -159,9 +159,6 @@ public class Exercise {
         wait.until(ExpectedConditions.elementToBeClickable(saveButton));
         saveButton.click();
 
-
     }
-
-
 
 }
