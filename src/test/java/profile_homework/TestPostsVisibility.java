@@ -30,12 +30,12 @@ public class TestPostsVisibility {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
-    /*@AfterMethod
+    @AfterMethod
     protected final void tearDownTest() {
         if (this.driver != null) {
             this.driver.close();
         }
-    }*/
+    }
 
     @DataProvider(name = "generateUsers")
     public Object[][] generateUsers(){
@@ -88,7 +88,7 @@ public class TestPostsVisibility {
         Actions clicking = new Actions(driver);
         clicking.moveByOffset(10,10).click().build().perform();
 
-        /*WebElement publicPostButton = driver.findElement(By.xpath("//label[@class=\"btn-public btn btn-primary active\"]"));
+        WebElement publicPostButton = driver.findElement(By.xpath("//label[@class=\"btn-public btn btn-primary\"]"));
         publicPostButton.click();
 
         WebElement publicPost = driver.findElement(By.xpath("//img[@src=\"https://i.imgur.com/V6bFcYU.jpg\"]"));
@@ -96,7 +96,7 @@ public class TestPostsVisibility {
         publicPost.click();
 
         Actions clicking1 = new Actions(driver);
-        clicking1.moveByOffset(10,10).click().build().perform();*/
+        clicking1.moveByOffset(10,10).click().build().perform();
 
     }
 
