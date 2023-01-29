@@ -144,7 +144,7 @@ public class Exercise {
         Boolean isTextDisplayed = wait.until(ExpectedConditions.textToBe(By.tagName("h2"), name));
         Assert.assertTrue(isTextDisplayed);
 
-        WebElement modifyProfile = driver.findElement(By.xpath("//i[@class=\"fas fa-user-edit\"]"));
+        WebElement modifyProfile = driver.findElement(By.xpath("//h2[text()='TestSkillo123456']/following-sibling::i"));
         wait.until(ExpectedConditions.elementToBeClickable(modifyProfile));
         modifyProfile.click();
 
