@@ -3,8 +3,9 @@
 <suite name="Web test suite" verbose="1" parallel="methods" thread-count="2">
     <test name="Parallel Tests">
         <classes>
-            <class name="profile_homework.Exercise"></class>>
-            <class name="profile_homework.Exercise2"></class>>
+            <class name="profile_homework.Login"></class>>
+            <class name="profile_homework.Registration"></class>>
+            <class name="profile_homework.ModifyMyProfile"></class>
         </classes>
     </test>
 </suite>
