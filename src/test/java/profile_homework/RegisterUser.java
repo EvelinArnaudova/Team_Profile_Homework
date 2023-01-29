@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Registration {
+public class RegisterUser {
     public static final String PASSWORD = "Password1.1Drowssap";
     private WebDriver driver;
 

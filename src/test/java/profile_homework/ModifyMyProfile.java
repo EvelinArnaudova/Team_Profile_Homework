@@ -40,7 +40,7 @@ public class ModifyMyProfile {
     @DataProvider(name = "generateUsers")
     public Object[][] generateUsers(){
         return new Object[][]{
-                {"testskillo@gmail.com", "Test1234", "TestSkillo123456"},
+                {"iSkilloo", "123123aA", "iskilloo"},
         };
     }
 

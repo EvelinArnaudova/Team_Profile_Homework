@@ -4,8 +4,9 @@
     <test name="Parallel Tests">
         <classes>
             <class name="profile_homework.Login"></class>>
-            <class name="profile_homework.Registration"></class>>
+            <class name="profile_homework.RegisterUser"></class>>
             <class name="profile_homework.ModifyMyProfile"></class>
+            <class name="profile_homework.TestPostsVisibility"></class>
         </classes>
     </test>
 </suite>
