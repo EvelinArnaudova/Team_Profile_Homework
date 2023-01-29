@@ -32,14 +32,14 @@ public class Exercise {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
-    @AfterMethod
+    /*@AfterMethod
     protected final void tearDownTest() {
         if (this.driver != null) {
             this.driver.close();
         }
-    }
+    }*/
 
-    @Test
+    @Test(priority = 0)
     public void testRegistration() {
         driver.get("http://training.skillo-bg.com:4300/posts/all");
         WebElement loginLink = driver.findElement(By.id("nav-link-login"));
@@ -68,7 +68,7 @@ public class Exercise {
         emailField.sendKeys(email);
 
         WebElement birthDateElement = driver.findElement(By.cssSelector("[formcontrolname='birthDate']"));
-        birthDateElement.sendKeys("11122003");
+        birthDateElement.sendKeys("11011990");
 
         WebElement passwordField = driver.findElement(By.id("defaultRegisterFormPassword"));
         passwordField.sendKeys(PASSWORD);
@@ -106,14 +106,11 @@ public class Exercise {
     @DataProvider(name = "generateUsers")
     public Object[][] generateUsers(){
         return new Object[][]{
-                {"earnaudova@gmail.com", "test123", "earnaudova" }, //login with email
-                {"DimitarTarkalanov", "Dimitar1.Tarkalanov1", "DimitarTarkalanov"},//login with username
-                {"testAdmin@gmail.com", "Admin1.User1", "AdminUser"}, //login with admin user
-                {"manager@gmail.com", "Manager1.Use1", "ManagerUser"} //login with manager user
+                {"testskillo@gmail.com", "Test1234", "TestSkillo123456"},
         };
     }
 
-    @Test(dataProvider = "generateUsers")
+    @Test(dataProvider = "generateUsers", priority = 1)
     public void testLogin(String user, String pass, String name){
 
         driver.get("http://training.skillo-bg.com:4300/posts/all");
